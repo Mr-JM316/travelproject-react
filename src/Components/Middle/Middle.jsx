@@ -5,7 +5,7 @@ import './Middle.css'
 const Middle = () =>
 {
     return (
-        <div>Middle</div>
+        <div></div>
     )
 }
 

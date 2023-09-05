@@ -5,7 +5,7 @@ import './Subscribe.css'
 const Subscribe = () =>
 {
     return (
-        <div>Subscribe</div>
+        <div></div>
     )
 }
 

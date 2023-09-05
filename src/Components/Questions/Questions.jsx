@@ -5,7 +5,7 @@ import './Questions.css'
 const Questions = () =>
 {
     return (
-        <div>Questions</div>
+        <div></div>
     )
 }
 

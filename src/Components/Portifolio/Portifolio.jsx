@@ -5,7 +5,7 @@ import './Portifolio.css'
 const Portifolio = () =>
 {
     return (
-        <div>Portifolio</div>
+        <div></div>
     )
 }
 
