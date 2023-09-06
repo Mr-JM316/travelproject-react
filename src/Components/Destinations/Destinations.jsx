@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect} from "react";
 
 import './Destinations.css'
 
@@ -16,7 +16,8 @@ import img7 from '../../Assets/img7.jpeg'
 import img8 from '../../Assets/img8.jpeg'
 import img9 from '../../Assets/img9.jpeg'
 import {TiLocation} from 'react-icons/ti'
-
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 const destinations =[
     {
         id:1,
@@ -35,90 +36,94 @@ const destinations =[
     {
         id:3,
         img:img3,
-        name:'Seychelles Island',
-        location:'Indian Ocean',
+        name:'Scotland',
+        location:'Scotland',
         rating: 4.7,
     },
     {
         id:4,
         img:img4,
-        name:'Seychelles Island',
-        location:'Indian Ocean',
+        name:'Eiffel Tower',
+        location:'Paris',
         rating: 4.7,
     },
     {
         id:5,
         img:img5,
-        name:'Seychelles Island',
-        location:'Indian Ocean',
+        name:'Amazon forest',
+        location:'Amazon forest',
         rating: 4.7,
     },
     {
         id:6,
         img:img6,
-        name:'Seychelles Island',
-        location:'Indian Ocean',
+        name:'Paris',
+        location:'Paris',
         rating: 4.7,
     },
     {
         id:7,
         img:img7,
-        name:'Seychelles Island',
-        location:'Indian Ocean',
+        name:'Tajmahal',
+        location:'India',
         rating: 4.7,
     },
     {
         id:8,
         img:img8,
-        name:'Seychelles Island',
-        location:'Indian Ocean',
+        name:'Australia',
+        location:'Australia',
         rating: 4.7,
     },
     {
         id:9,
         img:img9,
-        name:'Seychelles Island',
-        location:'Indian Ocean',
+        name:'Waterfall',
+        location:'India',
         rating: 4.7,
     },
 ];
 const Deestinations = () =>
 {
+        useEffect(()=>{
+            Aos.init({duration:2000})
+        },[]);
     return (
         <div className="destination section container">
             <div className="secContainer">
                 <div className="secTitle">
-                    <span className="redText">
+                    <span className="redText" data-aos="fade-up">
                         EXPLORE NOW
                     </span>
-                    <h3>Find Your Dream Destination</h3>
-                    <p>Fill in the fields below to find the next best 
+                </div>
+                    <h3 data-aos="fade-up">Find Your Dream Destination</h3>
+                    <p data-aos="fade-up">Fill in the fields below to find the next best 
                         spot for your next tour
                         </p>
-                </div>
+                
                 <div className="searchField grid">
-                    <div className="inputField flex">
+                    <div className="inputField flex" data-aos="fade-up">
                     <MdLocationPin className='icon'/>
                     <input type="text" placeholder="Location"/>
 
                     </div>
-                    <div className="inputField flex">
+                    <div className="inputField flex" data-aos="fade-up">
                     <BsFillCreditCardFill className='icon'/>
                     <input type="text" placeholder="Budget"/>
                     
                     </div>
-                    <div className="inputField flex">
+                    <div className="inputField flex" data-aos="fade-up">
                     <BsFillCalendarDateFill className='icon'/>
                     <input type="text" placeholder="Date"/>
                     
                     </div>
-                    <button className='btn flex'>
+                    <button className='btn flex' data-aos="fade-up">
                         <BiSearchAlt className='icon'/>
                         Search 
                    </button>
                 </div>
                 <div className="secMenu">
-                    <ul className="flex">
+                    <ul className="flex" data-aos="fade-up">
                         <li className="active">All</li>
                         <li>Recommended</li>
                         <li>Beach</li>
@@ -133,12 +138,12 @@ const Deestinations = () =>
                                 <div className="singleDestination"key={destination.id}>
                             <div className="imgDiv">
                                 <img src={destination.img} alt="Destination Image"/>
-                                <div className="descInfo flex">
+                                <div className="descInfo flex" data-aos="fade-up">
                                     <div className="text">
                                         <span className="name">
                                         {destination.name}
                                         </span>
-                                        <p className="flex">
+                                        <p className="flex" data-aos="fade-up">
                                             <TiLocation className='icon'/>
                                             {destination.location}
                                         </p>

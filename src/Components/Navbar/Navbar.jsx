@@ -35,7 +35,7 @@ const Navbar = () =>{
                 {/* icon to remove navbar*/}
                 <AiFillCloseCircle className='icon' onClick={removeNavBar}/>
             </div>
-            <button className="signUpBtn btn">Sign Up</button>
+            {/*<button className="signUpBtn btn">Sign Up</button>*/}
             {/*icon to toggle navbar */}
             <PiDotsNineBold className='icon' onClick={showNavBar}/>
 

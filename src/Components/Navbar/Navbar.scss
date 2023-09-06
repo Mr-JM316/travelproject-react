@@ -35,6 +35,7 @@
     /*background: #daa3a3;*/
     backdrop-filter:blur(5px);
     z-index: 1000;
+    background-color: rgba(255,255,255,0.737);
 
     .logoDiv{
 
@@ -99,4 +100,53 @@
     }
 
 
+}
+@media screen and (min-width: 768px)
+{
+    .navBar{
+        .logoDiv{
+            span{
+                font-size:var(--h2FontSize);
+            }
+        }
+        .closeIcon,.menuIcon{
+            display:none;
+        }
+        .menu{
+            ul{
+                display:flex;
+                gap:1rem;
+                li{
+                    font-size:var(--h3FontSize);
+                    font-weight: 500;
+                    padding:1rem 0;
+                    text-align:center;
+                    cursor:pointer;
+                    &:hover{
+                        color:var(--primaryColor);
+                        border-bottom: 1.5px solid var(--primaryColor);
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and(min-width:1240px){
+    .navBar{
+        padding: 2rem 6rem;
+        .menu{
+            ul{
+                gap:4rem;
+            }
+        }
+    }
+}
+@media screen and(min-width:1440px)
+{
+    .navBar{
+        padding: 2rem 14rem;
+        
+    }
 }
